@@ -1,0 +1,60 @@
+import 'dart:io';
+void main(){
+
+int residence;
+int hoursAtHome;
+
+//input type of residence
+print('Residence Types:');
+print('1 House');
+print('2 Apartment');
+print('3 Dormitory');
+
+print('Enter the residence');
+residence = int.parse(stdin.readLineSync()!);
+
+//input hours spend at home
+
+print('Enter Hours spent at Residence per Day');
+hoursAtHome = int.parse(stdin.readLineSync()!);
+//nested else if for hours at home
+
+
+String pet = "";
+               
+   switch(residence) 
+   {
+            
+     case 1:
+        if (hoursAtHome < 10) {
+         pet = "Goat";
+				}
+         else if (hoursAtHome >= 10 && hoursAtHome < 18)
+         {
+           pet = "Dog";
+
+				} 
+        else if (hoursAtHome >= 18) {
+          pet = "Pot-Bellied Pig";
+				}      
+        break;
+                       
+        case 2:
+       
+          if (hoursAtHome < 10)
+        {
+          pet = "Hamster";
+				} else if (hoursAtHome >= 10) {
+          pet = "Cat";
+				}
+        break;                                                      
+        case 3:
+        if (hoursAtHome < 6) {
+          pet = "Fish";
+				} else if (hoursAtHome >= 6) {
+          pet = "Hen";
+				}     
+        break; 
+        }
+        print('Recommendation: $pet');
+	}                     
